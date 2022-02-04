@@ -155,6 +155,7 @@ class AsyncClient {
 
     int8_t _recv(tcp_pcb* pcb, pbuf* pb, int8_t err);
     tcp_pcb * pcb(){ return _pcb; }
+    int8_t closed_slot(){ return _closed_slot; }
 
   protected:
     tcp_pcb* _pcb;
